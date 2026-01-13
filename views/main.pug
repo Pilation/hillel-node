@@ -1,0 +1,21 @@
+extends template.pug
+
+block content
+  .container.mt-4
+
+    .row
+      .col-12
+      //- h1.text-center.mb-4  Тут виведіть назву категорії
+      //- each item in some-goods Тут напишіть цикл, який перебирає товари категорії some-goods
+        .col-md-3.mb-4
+          .card.h-100.p-2
+            img.card-img-top(тут виведіть посилання на зображення)
+            .card-body
+              h5.card-title тут виведіть назву товару
+              p.card-text тут опис товару
+              p.card-text
+                b Price: ціну товару
+              p.card-text
+                | In stock: наявніть товару
+            .card-footer
+              a.btn.btn-primary(посилання на товар) View Details

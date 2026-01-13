@@ -1,0 +1,23 @@
+extends template
+
+block content
+  .container.mt-4
+    //- h1.text-center.mb-4 Тут виведіть назву категорії
+    if goods.length
+      .row
+        //- Додайте цикл
+          .col-md-3.mb-4
+            .card.h-100
+              .p-3
+                img.card-img-top(посилання на зображення)
+              .card-body
+                h5.card-title назва товару
+                p.card-text опис товару
+                p.card-text
+                  b Price: ціна товару
+                p.card-text
+                  | In stock: наявність товару
+              .card-footer
+                a.btn.btn-primary(посилання на товар) View Details
+    else
+      .alert.alert-warning.text-center No products found in this category.
