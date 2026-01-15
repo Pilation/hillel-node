@@ -1,0 +1,16 @@
+extends template.pug
+
+block content
+  .container.mt-4
+    h1.text-center.mb-4.text-capitalize category
+    if categories.length
+      .row
+        .row.justify-content-center
+        .col-md-6
+          ul
+            each category in categories
+              li
+                a(href=`/category/${category}`)
+                  span.text-capitalize= category
+    else
+      .alert.alert-warning.text-center No categories found.
