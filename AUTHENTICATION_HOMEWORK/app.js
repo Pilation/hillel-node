@@ -39,18 +39,7 @@ app.use(session({
     })
 }));
 
-app.use((req, res, next)=>{
-    console.log(req.method, req.url);
-    next();
-});
-
-const requireAuth = (req, res, next) => {
-    if (req.session.username) next();
-    else res.redirect('/login');
-}
-
 app.use((req, res, next)=> {
-    console.log(req.session);
     if (req.session.username) {
         res.locals.username = req.session.username;
         res.locals.email = req.session.email;

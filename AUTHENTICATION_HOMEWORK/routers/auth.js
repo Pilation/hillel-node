@@ -15,7 +15,6 @@ router.post(ROUTES.LOGIN, async (req, res) => {
     try {
         const { email, password } = req.body;
         const user = await authenticateUser(email, password);
-        console.log('Authenticated user:', user);
         if (user) {
             req.session.username = user.username;
             req.session.email = user.email;
@@ -37,12 +36,11 @@ router.post(ROUTES.LOGIN, async (req, res) => {
 // GET /logout
 router.get(ROUTES.LOGOUT, async (req, res) => {
     try {
-        destroySession(req.session);
-        res.redirect(ROUTES.HOME);
+        await destroySession(req.session);
     } catch (err) {
         console.error('Error destroy session:', err);
-        res.redirect(ROUTES.HOME);
     }
+    res.redirect(ROUTES.HOME);
 });
 
 // GET /register

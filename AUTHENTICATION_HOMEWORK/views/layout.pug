@@ -75,8 +75,8 @@ html
         a(href='/login') Login
         a(href='/register') Register
     
-    //- Header для авторизованих користувачів (окрім login, index, about)
-    if username && currentPage !== '/login' && currentPage !== '/about'
+    //- Header для авторизованих користувачів (окрім login)
+    if username && currentPage !== '/login'
       .user-header
         p <strong>Username:</strong> #{username}
         p <strong>Email:</strong> #{email || 'N/A'}

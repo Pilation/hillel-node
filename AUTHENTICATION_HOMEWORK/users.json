@@ -28,5 +28,11 @@
     "password": "m321",
     "role": "user",
     "email": "mike@mail.ua"
+  },
+  {
+    "username": "test-name",
+    "email": "test-email@mail.co",
+    "password": "123",
+    "role": "admin"
   }
 ]
