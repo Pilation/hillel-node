@@ -1,0 +1,32 @@
+[
+  {
+    "username": "Alex",
+    "password": "99fs",
+    "role": "user",
+    "email": "alex@mail.ua"
+  },
+  {
+    "username": "Maria",
+    "password": "m123",
+    "role": "admin",
+    "email": "maria@mail.ua"
+  },
+  {
+    "username": "John",
+    "password": "j456",
+    "role": "user",
+    "email": "john@mail.ua"
+  },
+  {
+    "username": "Sarah",
+    "password": "s789",
+    "role": "admin",
+    "email": "sarah@mail.ua"
+  },
+  {
+    "username": "Mike",
+    "password": "m321",
+    "role": "user",
+    "email": "mike@mail.ua"
+  }
+]

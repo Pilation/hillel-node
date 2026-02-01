@@ -1,0 +1,36 @@
+extends layout
+
+block content
+  h1 Register
+  
+  if error
+    p.error(style="color: red;") #{error}
+  
+  form(method="POST" action="/register")
+    div(style="margin-bottom: 10px;")
+      label(for="username") Username:
+      br
+      input(type="text" id="username" name="username" required style="width: 300px; padding: 5px;")
+    
+    div(style="margin-bottom: 10px;")
+      label(for="email") Email:
+      br
+      input(type="email" id="email" name="email" required style="width: 300px; padding: 5px;")
+    
+    div(style="margin-bottom: 10px;")
+      label(for="password") Password:
+      br
+      input(type="password" id="password" name="password" required style="width: 300px; padding: 5px;")
+    
+    div(style="margin-bottom: 10px;")
+      label(for="role") Role:
+      br
+      select(id="role" name="role" style="width: 312px; padding: 5px;")
+        option(value="user") User
+        option(value="admin") Admin
+    
+    div
+      button(type="submit" style="padding: 8px 20px; cursor: pointer;") Register
+  
+  p Already have an account? 
+    a(href="/login") Login here

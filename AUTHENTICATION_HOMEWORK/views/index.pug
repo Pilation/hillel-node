@@ -1,0 +1,10 @@
+extends layout
+
+block content
+  h1 Main Page
+  p Welcome to the main page of our application!
+  
+  if username
+    p You are logged in as #{username}
+  else
+    p Please log in to access protected pages.
