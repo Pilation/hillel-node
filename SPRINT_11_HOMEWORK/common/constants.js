@@ -9,8 +9,6 @@ export const MESSAGE = {
   NOT_FOUND: "Page not found",
   INTERNAL_SERVER_ERROR: "Internal server error",
   CURRENCY_NOT_SUPPORTED: "Вказана валюта не підтримується. Доступні: EUR, USD",
-  CURRENCIES_FETCHED: "Курси валют успішно отримано",
-  CURRENCY_FETCHED: "Курс валюти успішно отримано",
   EXTERNAL_API_ERROR: "Помилка при отриманні даних з зовнішнього API",
 };
 

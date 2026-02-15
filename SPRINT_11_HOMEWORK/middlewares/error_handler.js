@@ -6,8 +6,7 @@ export const errorHandler = (err, req, res, next) => {
   const message = err.message || MESSAGE.INTERNAL_SERVER_ERROR;
 
   res.status(status).json({
-    success: false,
-    data: null,
+    code: status,
     message,
   });
 };
